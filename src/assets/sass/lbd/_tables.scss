@@ -1,0 +1,80 @@
+.table{
+   .radio,
+   .checkbox{
+        position: relative;
+        height: 20px;
+        display: block;
+        width: 20px;
+        padding: 0px 0px;
+        margin: 0px 5px;
+        text-align: center;
+
+        .icons{
+            left: 5px;
+        }
+   }
+   > tbody > tr > th,
+   > tfoot > tr > th,
+   > thead > tr > td,
+   > tbody > tr > td,
+   > tfoot > tr > td{
+       padding: 12px 8px;
+       vertical-align: middle;
+   }
+   // MANU : aici este ceva schimbat!!!
+   > tbody > tr > td{
+       font-size: 14px;
+   }
+  > tr {
+    //display: block;
+  }
+  >thead > tr>th {
+    height: 0;
+    line-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: transparent;
+    border: none;
+    white-space: nowrap;
+  }
+  >thead > tr >th >b{
+    position: absolute;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.66);
+    padding: 40px 25px;
+    top: 0;
+    margin-left: -25px;
+    line-height: normal;
+  }
+
+    > thead > tr > th{
+        border-bottom-width: 1px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $dark-gray;
+        font-weight: $font-weight-normal;
+        padding-bottom: 5px;
+    }
+
+   .td-actions .btn{
+        @include opacity(0.36);
+
+        &.btn-xs{
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    }
+    .td-actions{
+        min-width: 90px;
+    }
+
+    > tbody > tr{
+        position: relative;
+
+        &:hover{
+            .td-actions .btn{
+                @include opacity(1);
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+  "jiraConfig":{
+    "protocol": "https",
+    "host": "jira.move.com",
+    "username": "pkundu",
+    "password": "",
+    "apiVersion": "2",
+    "strictSSL": true
+  },
+  "jenkinsConfig":{
+    "user":"jenkinssvc",
+    "pass":"123456",
+    "api_token":"be16cf2d1e85d9b98a54bb9b12e49be1",
+    "num_builds_to_pull": 1,
+    "jenkins_poll_time_in_ms": 1800000,
+    "tests_duration":4,
+    "projects" : [
+      {
+        "name":"BASECAMP",
+        "test_framework":"testng",
+        "url":"jenkins.rdc-dev.moveaws.com",
+        "job_names" : [
+          "Basecamp_Automation_Edge_Chrome","Basecamp_Automation_Edge_iphone","Basecamp_Automation_Edge_Android"]
+      },
+      {
+        "name":"RDC WEB MYHOME",
+        "test_framework":"testng",
+        "url":"jenkins.rdc-dev.moveaws.com/job/myhome/job/web/job/qa",
+        "job_names" : [
+          "haven-testing-automated-qa","haven-mobile-automated-qa-iOS"]
+      },
+      {
+        "name":"RDC WEB SEO",
+        "test_framework":"testng",
+        "url":"jenkins.rdc-dev.moveaws.com",
+        "job_names" : [
+          "RDC_SEO_AUTOMATION_CHROME"]
+      },
+      {
+        "name":"Save Search API",
+        "test_framework":"testng",
+        "url":"jenkins.moveaws.com",
+        "job_names" : [
+          "IPC_Automation"]
+      },
+      {
+        "name":"FEPS",
+        "test_framework":"testng",
+        "url":"jenkins.moveaws.com",
+        "job_names" : [
+          "FEPS_Automation"]
+      },
+      {
+        "name":"FESL",
+        "test_framework":"testng",
+        "url":"jenkins.moveaws.com",
+        "job_names" : [
+          "FESL_Automation"]
+      },
+      {
+        "name":"iOS",
+        "test_framework":"testng",
+        "url":"jenkins.rdc-dev.moveaws.com/job/Mobile-iOS-Daily-Regression",
+        "job_names" : [
+          "Mobile-iOS-Dashboard-Tests-SeLion-Core-iPad", "Mobile-iOS-Dashboard-Tests-SeLion-Core-iPhone","Mobile-iOS-Dashboard-Tests-SeLion-Rentals-iPad","Mobile-iOS-Dashboard-Tests-SeLion-Rentals-iPhone"]
+      },
+      {
+        "name":"Local",
+        "test_framework":"testng",
+        "url":"jenkins.rdc-dev.moveaws.com/job/Local_Api_Automation",
+        "job_names" : [
+          "Dev_Local_Automation_SchoolsApi_Tests","Dev_Local_Automation_CrimeApi_Tests"]
+      },
+      {
+        "name":"Android",
+        "test_framework":"junit",
+        "url":"jenkins.rdc-dev.moveaws.com/job/Android_Mobile",
+        "job_names" : [
+          "Android-Core-Nightly-Regression-Tests"]
+      },
+      {
+        "name":"News And Insights",
+        "test_framework":"testng",
+        "url":"jenkins.rdc-dev.moveaws.com",
+        "job_names" : [
+          "Edge_News_Insights_Regression_Web"]
+      },
+      {
+        "name":"Find2.0",
+        "test_framework":"testng",
+        "url":"jenkins.moveaws.com/job/Find2.0_Test_Automation",
+        "job_names" : [
+          "Find2.0_Alpha_Chrome_Web"]
+      }
+    ]
+  }
+}

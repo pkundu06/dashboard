@@ -1,0 +1,16 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "performance-now": "^2.1.0",
+    "request": "^2.83.0"
+  }
+}

@@ -1,0 +1,327 @@
+.durationDisplay{
+    height: 245px;
+    overflow-y: auto;
+}
+.failureDisplay{
+    overflow-y: auto;
+}
+
+.row:empty {
+    border: 10px solid #3b3b3b;
+    border-radius: 50%;
+    border-top: 12px solid #868686;
+    border-bottom: 12px solid #868686;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.card{
+    border-radius: $border-radius-base;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05),0 0 0 1px rgba(63,63,68,.1);
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+
+    .image{
+        width: 100%;
+        overflow: hidden;
+        height: 260px;
+        border-radius: $border-radius-base $border-radius-base 0 0;
+        position: relative;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        img {
+            width: 100%;
+        }
+    }
+    .ct-series {
+        .ct-bar{
+            stroke-width: 40px;
+        }
+    }
+
+    .greenbar{
+        stroke: green;
+    }
+    .redbar{
+        stroke: red;
+    }
+    .orangebar{
+        stroke: orange;
+    }
+    .filter{
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0,0,0,.68);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        @include opacity(0);
+
+        .btn{
+            @include vertical-align();
+        }
+    }
+    &:hover .filter{
+        @include opacity(1);
+    }
+    .btn-hover{
+        @include opacity(0);
+    }
+    &:hover .btn-hover{
+        @include opacity(1);
+    }
+    .content{
+        padding: 15px 15px 10px 15px;
+    }
+    .header{
+        padding: 5px 5px 0;
+        height:45px;
+    }
+    .category,
+    label{
+        font-size: $font-size-base;
+        font-weight: $font-weight-normal;
+        color: $dark-gray;
+        margin-bottom: 0px;
+
+        i{
+            font-size: $font-paragraph;
+        }
+    }
+
+    label{
+        font-size: $font-size-small;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    .title{
+        margin: $none;
+        color: $black-color;
+        font-weight: $font-weight-semi;
+        font-size: 15px;
+        display: inline;
+    }
+    .fail{
+        margin: $none;
+        color: $danger-color;
+        font-weight: $font-weight-semi;
+        font-size: 15px;
+        display: inline;
+    }
+    .pass{
+        margin: $none;
+        color: $success-color;
+        font-weight: $font-weight-semi;
+        font-size: 15px;
+        display: inline;
+    }
+    .skip{
+        margin: $none;
+        color: $warning-color;
+        font-weight: $font-weight-semi;
+        font-size: 15px;
+        display: inline;
+    }
+    .avatar{
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+    .description{
+        font-size: $font-size-base;
+        color: #333;
+    }
+    .footer{
+        padding: 0;
+        background-color: $transparent-bg;
+        line-height: 30px;
+
+        .legend{
+            padding: 5px 0;
+        }
+
+        hr{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    .stats{
+        color: #3b3b3b;
+        display: inline;
+    }
+    .footer div{
+        display: inline-block;
+    }
+
+    .author{
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+    .author i{
+        font-size: $font-size-base;
+    }
+    h6{
+        font-size: $font-size-small;
+        margin: 0;
+    }
+    &.card-separator:after{
+        height: 100%;
+        right: -15px;
+        top: 0;
+        width: 1px;
+        background-color: $medium-gray;
+        content: "";
+        position: absolute;
+    }
+
+    .ct-chart{
+        margin: 30px 0 30px;
+        height: 260px;
+    }
+    .ct-label{
+        font-size:1.8rem;
+        color: #111111;
+        fill:rgba(0, 0, 0, 0.6);
+        font-weight:400;
+    }
+    .ct-series-a .ct-slice-donut {
+        /* give the donut slice a custom colour */
+        stroke: #5ad58d;
+        /* customize stroke width of the donut slices in CSS. Note that this property is already set in JavaScript and label positioning also relies on this. In the right situation though it can be very useful to style this property. You need to use !important to override the style attribute */
+        /* create modern looking rounded donut charts */
+
+    }
+    .ct-series-a{
+        .ct-line{
+            stroke: #949494;
+        }
+    }
+    .ct-series-b{
+        .ct-line{
+            stroke: #29d53e;
+        }
+    }
+    .ct-series-c{
+        .ct-line{
+            stroke: #ee3100;
+        }
+    }
+    .ct-series-d{
+        .ct-line{
+            stroke: #eeea06;
+        }
+    }
+    .ct-series-b .ct-slice-donut {
+        /* give the donut slice a custom colour */
+        stroke: rgba(238, 49, 0, 0.78);
+    }
+    .table{
+        tbody td:first-child,
+        thead th:first-child{
+            padding-left: 15px;
+        }
+
+        tbody td:last-child,
+        thead th:last-child{
+            padding-right: 15px;
+        }
+    }
+
+    .alert{
+        border-radius: $border-radius-base;
+        position: relative;
+
+        &.alert-with-icon{
+            padding-left: 65px;
+        }
+    }
+}
+.card-user{
+    .image{
+        height: 110px;
+    }
+    .image-plain{
+        height: 0;
+        margin-top: 110px;
+    }
+    .author{
+        text-align: center;
+        text-transform: none;
+        margin-top: -70px;
+    }
+    .avatar{
+        width: 124px;
+        height: 124px;
+        border: 5px solid #FFFFFF;
+        position: relative;
+        margin-bottom: 15px;
+
+        &.border-gray{
+            border-color: #EEEEEE;
+        }
+    }
+    .title{
+        line-height: 24px;
+    }
+    .content{
+        min-height: 240px;
+    }
+}
+
+.card-user,
+.card-price{
+    .footer{
+        padding: 5px 15px 10px;
+    }
+    hr{
+        margin: 5px 15px;
+    }
+}
+.card-plain{
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+
+    .image{
+        border-radius: 4px;
+    }
+}
+
+.card-stats{
+    .icon-big{
+        font-size: 3em;
+        min-height: 64px;
+        i{
+            font-weight: bold;
+            line-height: 59px;
+        }
+    }
+    .numbers{
+        font-size: 2em;
+        text-align: right;
+        p {
+           margin: 0;
+        }
+    }
+}
