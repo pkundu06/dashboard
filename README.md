@@ -23,4 +23,4 @@ Please update config file under src/util/config.json based on your jenkins confi
       }
     ]
   }
-}```
+}
